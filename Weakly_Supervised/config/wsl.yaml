@@ -1,0 +1,14 @@
+hydra:
+  searchpath:
+    - file://verl/trainer/config
+
+defaults:
+  - ppo_trainer
+  - _self_
+
+data:
+  gen_batch_size: ${data.train_batch_size}
+
+trainer_type: semi
+
+wsl_algorithm: trapo
