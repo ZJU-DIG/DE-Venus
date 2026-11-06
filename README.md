@@ -35,7 +35,7 @@ Each trainer inherits from `RayPPOTrainer` and overrides only the data-processin
 |:------:|:-----------------------:|:-------------|:-----:|
 | **TTRL** | Majority-vote correctness | Test-Time Reinforcement Learning — uses majority voting as self-consistency reward for unlabeled data | [TTRL (2025)](https://arxiv.org/abs/2504.16084) |
 | **Intuitor** | KL(U ‖ π_θ) | Intrinsic reward from KL divergence between uniform distribution and current policy; higher KL → more uniform policy → more to learn | [Intuitor (2025)](https://arxiv.org/abs/2505.19590) |
-| **EMRL** | Entropy (tok-entropy / seq-entropy) | Uses token-level or sequence-level entropy of the policy as reward for unlabeled data | [EMRL (2025)](https://arxiv.org/abs/2505.21360) |
+| **EMRL** | Entropy (tok-entropy / seq-entropy) | Uses token-level or sequence-level entropy of the policy as reward for unlabeled data | [EMRL (2025)](https://arxiv.org/abs/2505.15134) |
 | **Co-rewarding** | Cross majority voting | Rewrites each question into a semantically equivalent variant; cross-votes between original and rewritten rollouts to produce pseudo-labels without any ground-truth | [Co-rewarding (2025)](https://arxiv.org/abs/2508.00410) |
 | **TraPO** | Cosine similarity of pass-rate trajectories | Generates pseudo-labels via majority voting, then filters unreliable ones by comparing pass-rate trajectory similarity against labeled reference pool | [TraPO (2025)](https://arxiv.org/abs/2512.13106) |
 | **GeoMin** | vMF distributional affinity + GMM filtering | Fits per-layer von Mises-Fisher distributions on hidden states (correct vs. incorrect); uses distributional affinity for pseudo-label confidence scoring, and GMM-based reliability filtering | [GeoMin (2026)](WIP) |
